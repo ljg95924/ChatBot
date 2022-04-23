@@ -25,8 +25,8 @@ public class Reservation {
 
     private static final Logger logger = LogManager.getLogger(Reservation.class);
 
-    private String accessKey = "WF83EH5UJ88zim65ZKdE";                             // 네이버 클라우드 플랫폼 회원에게 발급되는 개인 인증키
-    private String secretKey = "yNhdFVl0Kd9NWU9McNDSTb4DR4x55KZuZGOswRHf";         // 2차 인증을 위해 서비스마다 할당되는 main.service secret
+    private String accessKey = "";                             // 네이버 클라우드 플랫폼 회원에게 발급되는 개인 인증키
+    private String secretKey = "";         // 2차 인증을 위해 서비스마다 할당되는 main.service secret
     final private String method = "POST";                                          // 요청 method
     final private String timestamp = Long.toString(System.currentTimeMillis());    // current timestamp (epoch)
     String requestUrl = "";
@@ -35,7 +35,7 @@ public class Reservation {
         String hostNameUrl = "https://sens.apigw.ntruss.com";                      // 호스트 URL
 
         String requestUrlType = "/messages";                                       // 요청 URL
-        String serviceId = "ncp:sms:kr:259613567145:chatbot_schedule_message";     // 프로젝트에 할당된 SMS 서비스 ID
+        String serviceId = "";     // 프로젝트에 할당된 SMS 서비스 ID
         requestUrl = "/sms/v2/services/";                                          // 요청 URL
         requestUrl += serviceId + requestUrlType;
 
